@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+
+	<typeAliases>
+		<typeAlias type="hrms.main.login.dto.LoginDTO"
+			alias="loginUser" />
+		<typeAlias type="hrms.main.dashboard.dto.DashboardDTO"
+			alias="dashboardEmployee" />
+	</typeAliases>
+
+
+	<environments default="development">
+		<environment id="development">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="com.mysql.jdbc.Driver" />
+				<property name="url"
+					value="jdbc:mysql://localhost/springmybatis" /><!-- linkOfmysql/nameofmysqldb -->
+					<!-- AWS CONNECT: jdbc:mysql://my-rds-instance.xyz123456789012.region.rds.amazonaws.com:3306/mydatabase?useSSL=false -->
+				<property name="username" value="root" />
+				<property name="password" value="CodeBuster28" />
+			</dataSource>
+		</environment>
+	</environments>
+
+
+	<mappers>
+		<mapper resource="hrms/main/login/mapper/LoginMapper.xml" />
+		<mapper resource="hrms/main/dashboard/mapper/DashboardMapper.xml" />
+	</mappers>
+</configuration> 

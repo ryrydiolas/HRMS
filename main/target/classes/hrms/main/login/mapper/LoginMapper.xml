@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="hrms.main.login.mapper.LoginMapper">
+
+	<resultMap type="loginUser" id="result">
+		<id property="userId" column="userId" />
+		<result property="userRoleId" column="userRoleId" />
+		<result property="userName" column="userName" />
+		<result property="passWord" column="passWord" />
+		<result property="statusId" column="statusId" />
+	</resultMap>
+
+	<select id="getAllUsers" resultType="loginUser" resultMap="result">
+		select userName
+		from users
+	</select>
+
+	<select id="getUserByUsername" parameterType="String"
+		resultType="loginUser" resultMap="result">
+		 SELECT * FROM users WHERE userName = #{username} AND passWord = #{password}
+	</select>
+
+
+</mapper>

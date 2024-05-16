@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="hrms.main.login.mapper.DashboardMapper">
+
+	<resultMap type="dashboardEmployee" id="resultList">
+		<id property="id" column="id" />
+		<result property="fullname" column="fullname" />
+		<result property="email" column="email" />
+		<result property="gender" column="gender" />
+		<result property="hobbies" column="hobbies" />
+		<result property="country" column="country" />
+		<result property="address" column="address" />
+	</resultMap>
+
+	<select id="getEmployeeList" resultType="dashboardEmployee"
+		resultMap="resultList">
+		select *
+		from employee
+	</select>
+
+</mapper>
