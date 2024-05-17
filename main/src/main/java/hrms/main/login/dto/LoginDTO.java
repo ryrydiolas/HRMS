@@ -10,6 +10,10 @@ public class LoginDTO {
 	private String passWord;
 	
 	private String statusId;
+	
+	private String employeeNo;
+	
+	private String userCode;
 
 	public Integer getUserId() {
 		return userId;
@@ -51,10 +55,28 @@ public class LoginDTO {
 		this.statusId = statusId;
 	}
 
+	public String getEmployeeNo() {
+		return employeeNo;
+	}
+
+	public void setEmployeeNo(String employeeNo) {
+		this.employeeNo = employeeNo;
+	}
+
+	public String getUserCode() {
+		return userCode;
+	}
+
+	public void setUserCode(String userCode) {
+		this.userCode = userCode;
+	}
+
 	@Override
 	public String toString() {
 		return "LoginDTO [userId=" + userId + ", userRoleId=" + userRoleId + ", userName=" + userName + ", passWord="
-				+ passWord + ", statusId=" + statusId + "]";
+				+ passWord + ", statusId=" + statusId + ", employeeNo=" + employeeNo + ", userCode=" + userCode + "]";
 	}
+
+
 
 }

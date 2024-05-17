@@ -8,6 +8,8 @@
 	<resultMap type="loginUser" id="result">
 		<id property="userId" column="userId" />
 		<result property="userRoleId" column="userRoleId" />
+		<result property="employeeNo" column="employeeNo" />
+		<result property="userCode" column="userCode" />
 		<result property="userName" column="userName" />
 		<result property="passWord" column="passWord" />
 		<result property="statusId" column="statusId" />
@@ -20,7 +22,7 @@
 
 	<select id="getUserByUsername" parameterType="String"
 		resultType="loginUser" resultMap="result">
-		 SELECT * FROM users WHERE userName = #{username} AND passWord = #{password}
+		 SELECT * FROM springmybatis.users WHERE userName = #{username} AND passWord = #{password}
 	</select>
 
 

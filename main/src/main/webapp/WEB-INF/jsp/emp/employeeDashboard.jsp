@@ -15,7 +15,6 @@
 	href="<c:url value="/css/dashboard/dashboard.css" />">
 </head>
 <body>
-<h1>Employee Dashboard</h1>
 	<div id="body-pd">
 		<div class="l-navbar" id="navbar">
 			<nav class="nav">
@@ -40,19 +39,14 @@
 
 						</div>
 
-						<ul class="collapse__menuEA"
-							style="margin-top: -30px; margin-left: 8px;">
-							<li><ion-icon name="people-outline"></ion-icon><a id="myBtn"
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Time-In/Out</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Leave
-									Application</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Overtime
-									Application</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Official
-									Business Application</a></li>
+						<ul class="collapse__menuEA" style="margin-top: -30px;">
+							<li><a id="myBtn" href="#" class="collapse__sublink">Time-In/Out</a></li>
+							<li style="margin-top: -30px;"><a href="#"
+								class="collapse__sublink">Leave Application</a></li>
+							<li style="margin-top: -30px;"><a href="#"
+								class="collapse__sublink">vertime Application</a></li>
+							<li style="margin-top: -30px;"><a href="#"
+								class="collapse__sublink">Official Business Application</a></li>
 						</ul>
 
 						<div class="nav__link collapse">
@@ -63,34 +57,27 @@
 							</span>
 						</div>
 
-						<ul class="collapse__menuRD"
-							style="margin-top: -30px; margin-left: 8px;">
-							<li><ion-icon name="people-outline"></ion-icon><a id="myBtn"
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Request
+						<ul class="collapse__menuRD" style="margin-top: -30px;">
+							<li><a id="myBtn" href="#" class="collapse__sublink">Request
 									c-off use</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Request
-									update bank details</a></li>
+							<li style="margin-top: -30px;"><a href="#"
+								class="collapse__sublink">Request update bank details</a></li>
 						</ul>
 
 						<div class="nav__link collapse">
-							<ion-icon name="body-outline" class="nav__icon"></ion-icon>
-							<span class="nav__name" onclick="toggleSubMenuYD()">Your
-								Details <ion-icon name="chevron-down-outline"
+							<ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
+							<span class="nav__name" onclick="toggleSubMenuSched()">Your
+								Details<ion-icon name="chevron-down-outline"
 									class="collapse__link"></ion-icon>
 							</span>
 						</div>
 
-						<ul class="collapse__menuYD"
-							style="margin-top: -30px; margin-left: 8px;">
-							<li><ion-icon name="people-outline"></ion-icon><a id="myBtn"
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Employee
+						<ul class="collapse__menuSched" style="margin-top: -30px;">
+							<li><a id="myBtn" href="#" class="collapse__sublink">Employee
 									Benefits</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Pending
-									Course</a></li>
+							<li style="margin-top: -30px;"><a href="#"
+								class="collapse__sublink">Pending Course</a></li>
 						</ul>
-
 
 						<div class="nav__link collapse">
 							<ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
@@ -116,7 +103,7 @@
 		<header class="header">
 			<div class="greetMsg">
 				<ion-icon name="person-circle-outline" class="navpersonicon"></ion-icon>
-				<h1 style="margin-left: 10px;">Welcome ${username} ${userRoleId}</h1>
+				<h1 style="margin-left: 10px;">Welcome ${username}</h1>
 			</div>
 
 			<div>
@@ -124,6 +111,12 @@
 			</div>
 			<div class="subheader" id="subheader"></div>
 		</header>
+
+		<div class="subBody">
+			<h1 style="color:rgb(0, 128, 255);">Employee Details</h1>
+			<p>Employee Number: ${employeeNo}</p>
+			<p>Assigned Department: ITD</p>
+		</div>
 
 	</div>
 </body>

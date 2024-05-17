@@ -15,7 +15,6 @@
 	href="<c:url value="/css/dashboard/dashboard.css" />">
 </head>
 <body>
-<h1>HR Dashboard</h1>
 	<div id="body-pd">
 		<div class="l-navbar" id="navbar">
 			<nav class="nav">
@@ -27,32 +26,27 @@
 					<div class="nav__list">
 						<a href="#" class="nav__link active"> <ion-icon
 								name="home-outline" class="nav__icon"></ion-icon> <span
-							class="nav__name active">Dashboard</span>
+							class="nav__name active">Employee List</span>
 
 						</a>
 
 						<div class="nav__link collapse">
 							<ion-icon name="people-outline" class="nav__icon"></ion-icon>
 							<span class="nav__name" onclick="toggleSubMenuEA()">Employee
-								Attendance <ion-icon name="chevron-down-outline"
+								Record <ion-icon name="chevron-down-outline"
 									class="collapse__link"></ion-icon>
 							</span>
 
 						</div>
 
 						<ul class="collapse__menuEA"
-							style="margin-top: -30px; margin-left: 8px;">
-							<li><ion-icon name="people-outline"></ion-icon><a id="myBtn"
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Time-In/Out</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Leave
-									Application</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Overtime
-									Application</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Official
-									Business Application</a></li>
+							style="margin-top: -30px;">
+							<li><a id="myBtn"
+								href="#" class="collapse__sublink">Employee
+									Leave Record</a></li>
+							<li style="margin-top: -30px;"><a
+								href="#" class="collapse__sublink">Employee
+									OT Record</a></li>
 						</ul>
 
 						<div class="nav__link collapse">
@@ -64,38 +58,30 @@
 						</div>
 
 						<ul class="collapse__menuRD"
-							style="margin-top: -30px; margin-left: 8px;">
-							<li><ion-icon name="people-outline"></ion-icon><a id="myBtn"
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Request
+							style="margin-top: -30px;">
+							<li><a id="myBtn"
+								href="#" class="collapse__sublink" >Request
 									c-off use</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Request
+							<li style="margin-top: -30px;"><a
+								href="#" class="collapse__sublink" >Request
 									update bank details</a></li>
 						</ul>
 
 						<div class="nav__link collapse">
-							<ion-icon name="body-outline" class="nav__icon"></ion-icon>
-							<span class="nav__name" onclick="toggleSubMenuYD()">Your
-								Details <ion-icon name="chevron-down-outline"
-									class="collapse__link"></ion-icon>
-							</span>
-						</div>
-
-						<ul class="collapse__menuYD"
-							style="margin-top: -30px; margin-left: 8px;">
-							<li><ion-icon name="people-outline"></ion-icon><a id="myBtn"
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Employee
-									Benefits</a></li>
-							<li style="margin-top: 0px;"><ion-icon name="ribbon-outline"></ion-icon><a
-								href="#" class="collapse__sublink" style="margin-left: 10px;">Pending
-									Course</a></li>
-						</ul>
-
-
-						<div class="nav__link collapse">
 							<ion-icon name="calendar-outline" class="nav__icon"></ion-icon>
-							<span class="nav__name">Schedule</span>
+							<span class="nav__name" onclick="toggleSubMenuSched()">Schedule<ion-icon
+									name="chevron-down-outline" class="collapse__link"></ion-icon></span>
 						</div>
+
+						<ul class="collapse__menuSched"
+							style="margin-top: -30px;">
+							<li><a id="myBtn"
+								href="#" class="collapse__sublink">Generate
+									Timesheet</a></li>
+							<li style="margin-top: -30px;"><a
+								href="#" class="collapse__sublink">Set
+									Holliday</a></li>
+						</ul>
 
 						<div class="nav__link collapse">
 							<ion-icon name="settings-outline" class="nav__icon"></ion-icon>

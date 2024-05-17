@@ -44,7 +44,7 @@ body {
 	top: 0;
 	left: 0;
 	background: linear-gradient(to bottom, rgb(0, 128, 255), rgb(0, 64, 128));
-	height: 30%;
+	height: 25%;
 	width: 100%;
 	z-index: -1;
 }
@@ -93,6 +93,7 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 2rem;
+	width: 50px;
 }
 
 .nav__toggle {
@@ -111,6 +112,19 @@ a {
 }
 
 .nav__link {
+	display: grid;
+	grid-template-columns: max-content max-content;
+	align-items: center;
+	column-gap: .75rem;
+	padding: .75rem;
+	color: var(--white-color);
+	border-radius: .5rem;
+	margin-bottom: 1rem;
+	transition: .3s;
+	cursor: pointer;
+}
+
+.collapse__sublink {
 	display: grid;
 	grid-template-columns: max-content max-content;
 	align-items: center;
@@ -150,12 +164,12 @@ span:hover {
 
 /*Expander menu*/
 .expander {
-	width: calc(var(--nav-width) + 9.25rem);
+	width: calc(var(--nav-width) + 15%);
 }
 
 /*Add padding body*/
 .body-pd {
-	padding: 0 0 0 10rem;
+	padding: 0 0 0 12rem;
 }
 
 /*Active links menu*/
@@ -185,6 +199,12 @@ span:hover {
 	padding: .75rem 2.25rem;
 	width: calc(100% + 20px);
 	padding-bottom: 5px;
+	transition: background-color 0.3s, color 0.3s; /* Smooth transition for the hover effect */
+}
+
+.collapse__menuEA li a:hover {
+	font-size: 13px;
+    color: rgb(0, 0, 0); /* Text color on hover */
 }
 
 .collapse__menuRD {
@@ -194,6 +214,12 @@ span:hover {
 	padding-bottom: 5px;
 }
 
+.collapse__menuRD li a:hover {
+	font-size: 13px;
+    color: rgb(0, 0, 0); /* Text color on hover */
+}
+
+
 .collapse__menuYD {
 	display: none;
 	padding: .75rem 2.25rem;
@@ -201,6 +227,17 @@ span:hover {
 	padding-bottom: 5px;
 }
 
+.collapse__menuSched {
+	display: none;
+	padding: .75rem 2.25rem;
+	width: calc(100% + 20px);
+	padding-bottom: 5px;
+}
+
+.collapse__menuSched li a:hover {
+	font-size: 13px;
+    color: rgb(0, 0, 0); /* Text color on hover */
+}
 
 .collapse__sublink {
 	color: rgb(0, 128, 255);
@@ -259,6 +296,18 @@ span:hover {
 .header__menu a {
 	color: rgb(102, 102, 102);
 }
+
+/* Modal content */
+.subBody {
+    background-color: rgb(255, 255, 255);
+    border-radius: .5rem;
+    width: 40%;
+    height: 200px;
+    margin-top:30px;
+    padding: 20px; /* Adding padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adding a box shadow */
+}
+
 
 .header__menu a {
 	text-decoration: none;

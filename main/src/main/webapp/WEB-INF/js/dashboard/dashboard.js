@@ -46,3 +46,13 @@ function toggleSubMenuYD() {
 	} 
 }
 
+function toggleSubMenuSched() {
+	var submenu = document.querySelector('.collapse__menuSched');
+	if (submenu.style.display === "none" || submenu.style.display === "") {
+		submenu.style.display = "block";
+	} else {
+		submenu.style.display = "none";
+	} 
+}
+
+

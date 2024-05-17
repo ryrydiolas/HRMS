@@ -32,6 +32,7 @@ private static final Logger logger = LoggerFactory.getLogger(LoginController.cla
         if (loggedInUser != null) {
             model.addAttribute("username", loggedInUser.getUserName());
             model.addAttribute("userRoleId", loggedInUser.getUserRoleId());
+            model.addAttribute("employeeNo", loggedInUser.getEmployeeNo());
             System.out.println("==================== Username from request dashboard side: ====================" + loggedInUser.getUserName());
             System.out.println("==================== UserRoleId from session: ====================" + loggedInUser.getUserRoleId());
         } else {
