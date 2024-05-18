@@ -37,7 +37,7 @@ function submitAuthentication(event) {
         success: function(response) {
             // Handle successful authentication
             window.location.href = "/main/dashboard"; // Redirect to dashboard
-            alert("WELCOME TO HRMS" + " " +  formData.username);
+            alert("WELCOME TO SEMEO HR SYSTEM" + " " +  formData.username);
         },
         error: function(xhr, status, error) {
             // Handle authentication error
